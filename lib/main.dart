@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
           body: SafeArea(
             child: Center(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   CircleAvatar(
                     radius: 50.0,
@@ -49,27 +50,21 @@ Widget customText(String text, String fontFamily,
       ),
     );
 
-Widget customContainer(IconData icon, String content) => Container(
+Widget customContainer(IconData icon, String content) => Card(
       color: Colors.white,
-      padding: EdgeInsets.all(10.0),
       margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-      child: Row(
-        children: <Widget>[
-          Icon(
-            icon,
-            color: Colors.teal,
-            size: 30,
-          ),
-          SizedBox(
-            width: 10.0,
-          ),
-          Text(
-            content,
-            style: TextStyle(
-                color: Colors.teal.shade900,
-                fontSize: 20,
-                fontFamily: 'SourceSansPro'),
-          ),
-        ],
+      child: ListTile(
+        leading: Icon(
+          icon,
+          color: Colors.teal,
+          size: 30,
+        ),
+        title: Text(
+          content,
+          style: TextStyle(
+              color: Colors.teal.shade900,
+              fontSize: 20,
+              fontFamily: 'SourceSansPro'),
+        ),
       ),
     );
