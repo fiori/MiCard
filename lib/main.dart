@@ -11,23 +11,32 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.teal,
           body: SafeArea(
             child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  CircleAvatar(
-                    radius: 50.0,
-                    backgroundImage: AssetImage('images/logo.jpg'),
-                  ),
-                  customText(
-                    'Flavio Fiori',
-                    'Pacifico',
-                    fontLetterSize: 40.0,
-                  ),
-                  customText('SOFTWARE DEVELOPER', 'SourceSansPro',
-                      haveLetterSpacing: true, fontColor: Colors.teal.shade100),
-                  customContainer(Icons.phone, '96 56 55 0 99'),
-                  customContainer(Icons.email, 'fiori94@hotmail.com'),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.all(60.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    CircleAvatar(
+                      radius: 50.0,
+                      backgroundImage: AssetImage('images/logo.jpg'),
+                    ),
+                    customText(
+                      'Flavio Fiori',
+                      'Pacifico',
+                      fontLetterSize: 40.0,
+                    ),
+                    customText('SOFTWARE DEVELOPER', 'SourceSansPro',
+                        haveLetterSpacing: true,
+                        fontColor: Colors.teal.shade100),
+                    SizedBox(
+                      height: 20.0,
+                      width: 150.0,
+                      child: Divider(color: Colors.teal.shade100),
+                    ),
+                    customContainer(Icons.phone, '96 56 55 0 99'),
+                    customContainer(Icons.email, 'fioridevelopment@gmail.com'),
+                  ],
+                ),
               ),
             ),
           )),
